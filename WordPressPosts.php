@@ -6,18 +6,14 @@ global $wgWordPressPostsPortletHeader;
 $wgWordPressMaxPosts = 5; // default value
 $wgWordPressPostsPortletHeading = "blog posts";
 
-//$wgWordPressPath = '../../blog/';
-
-
 $wgAutoloadClasses['WordPressPostsHooks'] = dirname(__FILE__) . '/WordPressPosts.hooks.php';
-#$wgAutoloadClasses['WordPressPostsLang'] = dirname(__FILE__) . '/WordPressPosts.hooks.php';
 
 $wgHooks['SkinBuildSidebar'][] = 'displayWordPressPosts';
 
 $wgExtensionCredits['parserhook'][] = array(
        'name' => 'WordPressPosts',
        'author' =>'[http://neurov.is/on Jonathan Williford]', 
-       #'url' => 'http://www.wikipedia.org/wiki/User:JonathanWilliford', 
+       'url' => 'http://www.mediawiki.org/wiki/Extension:WordPressPosts', 
        'description' => 'Lists recent WordPress blog posts in the MediaWiki sidebar.'
        );
 
