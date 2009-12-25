@@ -7,7 +7,6 @@ function displayWordPressPosts( $skin, &$bar )
 
 	query_posts('posts_per_page='.$wgWordPressMaxPosts);
 
-	$out = '<div class="pBody">'."\n";
 	$out .= "<ul>\n";
 	if ( !have_posts() )
 	{
@@ -21,7 +20,6 @@ function displayWordPressPosts( $skin, &$bar )
 		$out .= '</a></li>';
 	}
 	$out .= '</ul>';
-	$out .= '</div>';
 	$bar[ $wgWordPressPostsPortletHeading ] = $out;
 	return true;
 }
