@@ -1,7 +1,8 @@
 <?php
 
-function displayWordPressPosts( $skin, &$bar ) 
-{
+class WordPressPostsHooks {
+  public static function displayWordPressPosts( $skin, &$bar ) 
+  {
 	global $wgWordPressMaxPosts;
 	global $wgWordPressPostsPortletHeading;
 
@@ -22,6 +23,7 @@ function displayWordPressPosts( $skin, &$bar )
 	$out .= '</ul>';
 	$bar[ $wgWordPressPostsPortletHeading ] = $out;
 	return true;
+  }
 }
 
 ?>

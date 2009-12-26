@@ -8,7 +8,7 @@ $wgWordPressPostsPortletHeading = "blog posts";
 
 $wgAutoloadClasses['WordPressPostsHooks'] = dirname(__FILE__) . '/WordPressPosts.hooks.php';
 
-$wgHooks['SkinBuildSidebar'][] = 'displayWordPressPosts';
+$wgHooks['SkinBuildSidebar'][] = 'WordPressPostsHooks::displayWordPressPosts';
 
 $wgExtensionCredits['parserhook'][] = array(
        'name' => 'WordPressPosts',
